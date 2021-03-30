@@ -19,6 +19,16 @@
    inkscape:version="1.0.2 (e86c870879, 2021-01-15)">
   <defs
      id="defs10" />
+   <style>
+    @font-face {
+        font-family: font;
+        src: url(Curse Casual.ttf); format("truetype");
+    }
+    svg{
+        font-family: font, fallBackFonts, sans-serif;
+    }
+   </style>
+
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
