@@ -22,7 +22,7 @@
    <style>
     @font-face {
         font-family: Curse Casual;
-        src: url(Curse Casual.ttf); format("truetype");
+        src: url(cursecasual.ttf); format("truetype");
     }
     svg{
         font-family: font, fallBackFonts, sans-serif;
