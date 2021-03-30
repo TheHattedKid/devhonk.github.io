@@ -21,7 +21,7 @@
      id="defs10" />
    <style>
     @font-face {
-        font-family: font;
+        font-family: Curse Casual;
         src: url(Curse Casual.ttf); format("truetype");
     }
     svg{
