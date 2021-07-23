@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Goose's Only1s-ifyer!</title>
+	<h1><center><marquee>Goose's Only1s-ifyer!</marquee></center></h1>
+	<br>
+	<script>
+		function convert() {
+			var val = parseInt(document.getElementById("number").value)
+			if(val !== NaN) {
+				document.getElementById("output").innerHTML = `Result: ${numToAAAAA(val)}`
+				return
+			}
+			document.getElementById("output").innerHTML = `Thats not a decimal number Josuke!`
+		}
+		function numToAAAAA(num) {
+			let binary = num.toString(2)
+			let ones = []
+			for(let i = 0; i < binary.length; i++) {
+			let c = binary.charAt(i)
+			if(c === '1') {
+				let a = (binary.length - 1) - i
+				ones.push(a)
+			}   
+		}
+    let o = "("
+    for(let i = 0; i < ones.length; i++) {
+        o += ones[i] !== 0 ? `(1 << ${ones[i].toString(2).includes('0') ? numToAAAAA(ones[i]) : '0b' + ones[i].toString(2)})${i == (ones.length - 1) ? '' : '|'}` : ('1')
+    }
+    return o + ')';
+}
+	</script>
+  </head>
+  <body>
+	This tool takes a number, and converts it into a JS/Java/C/whatever expression that gives the same number!<br>
+	Ain't that wacky?<br>
+	<label for="number">Enter your number:</label>
+	<input type="text" id="number" name="number" required
+       minlength="1" maxlength="10" size="20">
+	<button type="button" onclick="convert()">I'm OK with my choices and really want a bad version of my number</button>
+	<br><p id="output"></p>
+  </body>
+</html>
