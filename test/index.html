@@ -7,7 +7,7 @@
 	<script>
 		function convert() {
 			var val = parseInt(document.getElementById("number").value)
-			if(val !== NaN) {
+			if(!isNaN(val)) {
 				document.getElementById("output").innerHTML = `Result: ${numToAAAAA(val)}`
 				return
 			}
