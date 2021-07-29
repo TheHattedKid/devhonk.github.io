@@ -25,7 +25,8 @@
 		}
     let o = "("
     for(let i = 0; i < ones.length; i++) {
-        o += ones[i] !== 0 ? `(1 << ${ones[i].toString(2).includes('0') ? numToAAAAA(ones[i]) : '0b' + ones[i].toString(2)})${i == (ones.length - 1) ? '' : '|'}` : ('1')
+	//send help
+        o += ones[i] !== 0 ? `(1 << ${(ones[i].toString().length === 1 || ones[i].toString().includes('0') || ones[i].toString().includes('2' || ones[i].toString().includes('3')) || ones[i].toString().includes('4') || ones[i].toString().includes('5') || ones[i].toString().includes('6') || ones[i].toString().includes('7') || ones[i].toString().includes('8') || ones[i].toString().includes('9')) ? numToAAAAA(ones[i]) : '' + ones[i].toString()})${i == (ones.length - 1) ? '' : '|'}` : ('1')
     }
     return o + ')';
 }
