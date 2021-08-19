@@ -15,7 +15,7 @@
 			for(var shape of textPoints) {
 				context.beginPath();
 				for(var point of shape) {
-					context.move(point[0] * canvas.width, point[1] * canvas.height);
+					context.moveTo(point[0] * canvas.width, point[1] * canvas.height);
 					pauseExecution(Math.random()*10)
 				}
 				context.fill()
