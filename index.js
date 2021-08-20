@@ -1,4 +1,4 @@
-const DIV_BY_FOR_MOVE = 150
+const DIV_BY_FOR_MOVE = 250
 const MAX_DIST = 7
 let textPoints = [
     [
