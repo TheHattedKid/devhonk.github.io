@@ -1,4 +1,5 @@
 const DIV_BY_FOR_MOVE = 150
+const MAX_DIST = 7
 let textPoints = [
     [
         [0.44, 0.55],
@@ -340,10 +341,12 @@ canvas.height = 100;
 let mouseX
 let mouseY
 document.onmousemove = (event) => {
-    mouseX = event.screenX
-    mouseY = event.screenY
+    mouseX = event.clientY
+    mouseY = event.clientX
 }
-
+function dist(x0, y0, x1, y1) {
+	return Math.sqrt(Math.pow(x1 - x0, 2) + Math.pow(y1 - y0, 2))
+}
 function pauseExecution(milliseconds) {
     let startTime = new Date();
     while ((new Date()) - startTime <= milliseconds);
@@ -426,12 +429,25 @@ setInterval(function() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerWidth / 5;
     context = canvas.getContext('2d');
-    context.fillStyle = mmToRGB((((Math.sin(i / 100) + 1) / 2) * 370) + 380);
-    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.fillStyle = mmToRGB((((Math.sin(i / 100) + 1) / 2) * 370) + 380)
+    context.clearRect(0, 0, canvas.width, canvas.height)
     for (let shape of textPoints) {
-        context.beginPath();
+        context.beginPath()
         for (let point of shape) {
-            context.lineTo((point[0] + (Math.random() / DIV_BY_FOR_MOVE)) * canvas.width, (point[1] + (Math.random() / DIV_BY_FOR_MOVE)) * canvas.height);
+			let pointX = (point[0] + (Math.random() / DIV_BY_FOR_MOVE)) * canvas.width
+			let pointY = (point[1] + (Math.random() / DIV_BY_FOR_MOVE)) * canvas.height
+			//let distMousePoint = dist(pointX, pointY, mouseX, mouseY)
+			/*if(Math.abs(distMousePoint) < MAX_DIST) {
+				console.log(distMousePoint)
+				if(distMousePoint <= -1) {
+					pointX += Math.abs(distMousePoint) / 2
+					pointY += Math.abs(distMousePoint) / 2
+				} else {
+					pointX -= Math.abs(distMousePoint) / 2
+					pointY -= Math.abs(distMousePoint) / 2
+				}
+			}*/
+            context.lineTo(pointX, pointY)
             //pauseExecution(Math.random()/100)
         }
         context.fill()
@@ -439,3 +455,4 @@ setInterval(function() {
     }
     i++
 }, 100)
+
