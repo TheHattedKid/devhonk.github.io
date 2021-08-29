@@ -1,4 +1,40 @@
-@font-face {
-    font-family: Curse Casual;
-    src: url(https://devhonk.github.io/Curse%20Casual.ttf);
-}
+span {
+				display: inline-block;
+				vertical-align: middle;
+				line-height: normal;
+			}
+			nav.menu {
+				background-color: black;
+			}
+			div.centerH {
+				margin:auto;
+			}
+			html {
+				height: 100%;
+				background: rgb(0,2,54);
+				background: linear-gradient(180deg, rgba(0,2,54,1) 0%, rgba(31,40,205,1) 10000%);
+				font-family: "Curse Casual";
+				color: white;
+				font-size: 30px;
+				overflow-x:hidden;
+			}
+			body {
+				height: 100%;
+				margin: 0;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+			}
+			@font-face {
+				font-family: "Curse Casual";
+				src: url('https://devhonk.github.io/cursecasual.ttf');
+			}
+			a {
+				color: #52d7d9;
+			}
+			a.hidden {
+				color: white;
+				text-decoration: none;
+			}
+			a.hidden + a.hidden {
+				margin-left: 20px
+			}
