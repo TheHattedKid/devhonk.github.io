@@ -18,6 +18,9 @@ span {
 				font-size: 30px;
 				overflow-x:hidden;
 			}
+			blockquote {
+				border-left: 6px solid gray;
+			}
 			body {
 				height: 100%;
 				margin: 0;
