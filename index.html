@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		 <canvas id="gooseOnTheWebCanvas">
+		<nav class="menu">
+			<span><a class="hidden" href="./index.html">Goose Does Stuff</a></span>
+		</nav>
+		<canvas id="gooseOnTheWebCanvas">
 			<center>
 				<img src="goosedoesstuff.png" alt="Goose Does Stuff"/>
 			</center>
 		</canvas>
 		<script src="index.js">Scripts? I think they are unsupported around here</script>
 		<style>
+			span {
+				display: inline-block;
+				vertical-align: middle;
+				line-height: normal;
+			}
+			nav.menu {
+				height: 7.5%;
+				background-color: black;
+			}
+			div.centerH {
+				margin:auto;
+			}
 			html {
 				height: 100%;
 				background: rgb(0,2,54);
@@ -29,6 +44,10 @@
 			}
 			a {
 				color: #52d7d9;
+			}
+			a.hidden {
+				color: white;
+				text-decoration: none;
 			}
 		</style>
 		<title>Goose's Little Space</title>
