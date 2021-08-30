@@ -61,7 +61,7 @@ Wait a second... You wanna see the code? Oh it's right there, but be careful of 
 
 #include <gint/bfile.h>
 
-#define WIDTH 128
+#define WIDTH 64
 #define HEIGHT 64
 #define SIZE (WIDTH*HEIGHT)
 #define BSIZE ((WIDTH / 8) * HEIGHT)
