@@ -38,6 +38,7 @@ span {
 				color: white;
 				text-decoration: none;
 			}
+
 			a.hidden + a.hidden {
 				margin-left: 20px
 			}
