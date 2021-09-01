@@ -1,19 +1,23 @@
 Bad Apple!! on a FX-CG50
+thanks maxime for automating my workflow with BA!'s
 This is how I ran Bad Apple!! on my FX-CG50(its not that great tho)
 \_-----_/
-NOTE: So this BA! should have been published like, *months* earlier in a **PDF** but now that I have a website... Why not do it?
-<center>
+<centeredText>NOTE: So this BA! should have been published like, *months* earlier in a **PDF** but now that I have a website... Why not do it?</centeredText>
+
 # Chapter 1: The Broad Story
-So everything really starts the 24th of Jaunary 2021 on the Discord server Arkode where the user Nedo(:>) posts this
-</center>
+
+<centeredText>
+So everything really starts the 24th of Jaunary 2021 on the Discord server Arkode where the user Nedo(:>) posts this :
+</centeredText>
+
 > [my goal is to play bad apple in the console](https://discord.com/channels/706241564350873684/706243286557523999/802988192601079839)
 
 
 
 -Nedo
-<center>
+<centeredText>
 The very next day, I sent
-</center>
+</centeredText>
 > [time to do some stuff](https://discord.com/channels/706241564350873684/793164407977934918/803350180287479829)
 
 > [imma port bad apple ~~2~~](https://discord.com/channels/706241564350873684/793164407977934918/803350205700898826)
@@ -24,25 +28,41 @@ The very next day, I sent
 
 
 -Me
-<center>
+<centeredText>
 Then everyone complained about me wanting to only use C, official hueh moment.
+</centeredText>
 
+<centeredText>
 The first method that I thinked of is of storing a big array of all of the pixels, of all the frames, but decided to scrape the idea because of the limited memory(for information, gint lets you only use 500kB of RAM(source: I dont know I just read the linker script and I may be wrong), so I'll just set this as the max amount of RAM you can use)
-The second one is just to store it into a file, and that would be a good way because the graphing calculator has 16MiB of Flash usable by programs and in a USB Flash mode(funfact, my Manjaro partition is 128GiB, therefore, I would need almost 8000(8192 to be almost exact) FX-CG50s to put an image of my drive inside them)
+</centeredText>
 
+<centeredText>
+The second one is just to store it into a file, and that would be a good way because the graphing calculator has 16MiB of Flash usable by programs and in a USB Flash mode(funfact, my Manjaro partition is 128GiB, therefore, I would need almost 8000(8192 to be almost exact) FX-CG50s to put an image of my drive inside them)
+</centeredText>
+
+<centeredText>
 I also wanted to originally use PrizmSDK, but it was a pain to install on Linux and other reasons, but quickly found out about `gint`, an epic unikernel or whatever for the fx-cg50(color) and fx(monochrome) calculators.
 I also had a problem with me losing my graphing calculator(sadly) but since I am an idiot it was in my bag ( :^| ) so fast forward to April :^), when I release [my demo](https://youtu.be/0to33n63xKo) to the WOOOORRRLDDD!!!(literally 2 months after nedo does his Bad Apple on Notepad) and release the program on Planète Casio and TI-Planet, *fin*.
+</centeredText>
 
 # Chapter 2: The inner workings
 
+<centeredText>
 So you want to know how does it work? Well it's suprisingly simple.
+</centeredText>
 
+<centeredText>
 There's a file named ba.prm at the root directory, it's the video file
+</centeredText>
 
+<centeredText>
 How is a frame written? Well, a byte of this file contains 8 pixels, and since the output resolution is of 64\*64 pixels, a frame takes *512* bytes of the file, which does not look like much, but for 3 minutes of video, the output file is of around 3MiB(around 18.75% of the total flash memory avaible for programs), and its mostly wasted for monochrome video.
+</centeredText>
 
+<centeredText>
 Wait a second... You wanna see the code? Oh it's right there, but be careful of the ***Bad Code*** that it is(funfact: the code was made before gint\_world\_switch was a thing, and I was new to the tool)!
-</center>
+</centeredText>
+
 ```c
 //you can use this code whenever you want
 //just tell everyone that this atrocity is mine
@@ -177,19 +197,27 @@ static int callBack(volatile int* ticc) {
 }
 ```
 
-<center>
 
 # Chapter 3: Copycats
 
+<centeredText>
 Before starting the project I checked arround if it was worth it.
 <s>Well guess what? It wasn't!</s> (never think of a project as non worth it btw, you still learn from it)
 Turns out someone has already made Bad Apple for the same calculator, in *Python*, and it was pretty good!
 but turns out... THE LINK. FOR. DOWNLOAD. WAS. DEAD. AT THE TIME.
 so I decided to do it as it gave me 2 more reason to do it
+</centeredText>
+
+<centeredText>
 
 # Chapter 4: Sorry...
 
-This is the first BA! ever made, so I'm making errors + I'm not native. This BA! is a test for the next ones(The Hello World one does not count >:( )
+</centeredText>
 
+<centeredText>
+This is the first BA! ever made, so I'm making errors + I'm not native. This BA! is a test for the next ones(The Hello World one does not count >:( )
+</centeredText>
+
+<centeredText>
 On that, I've got stuff to do! See you next time!
-</center>
+</centeredText>
