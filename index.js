@@ -455,4 +455,10 @@ setInterval(function() {
     }
     i++
 }, 100)
-
+let click = 0
+function ductapeClick() {
+    if(click ++=== 4) {
+        //alert("e")
+        document.getElementById("screenshot").src = "ductapeshell.png"
+    }
+}

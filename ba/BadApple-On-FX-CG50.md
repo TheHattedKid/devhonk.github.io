@@ -1,6 +1,6 @@
 Bad Apple!! on a FX-CG50
 thanks maxime for automating my workflow with BA!'s
-This is how I ran Bad Apple!! on my FX-CG50(its not that great tho)
+This is how I ran Bad Apple!! on my FX-CG50(its not that dolgreat tho)
 \_-----_/
 <centeredText>NOTE: So this BA! should have been published like, *months* earlier in a **PDF** but now that I have a website... Why not do it?</centeredText>
 
