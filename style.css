@@ -18,7 +18,7 @@ html {
 	background: linear-gradient(180deg, rgba(0, 2, 54, 1) 0%, rgba(31, 40, 205, 1) 10000%);
 	font-family: "Curse Casual";
 	color: white;
-	font-size: 30px;
+	font-size: 1.75vw;
 	overflow-x: hidden;
 }
 
@@ -48,9 +48,11 @@ a.hidden {
 }
 
 a.hidden+a.hidden {
-	margin-left: 20px
+	margin-left: 20px;
 }
-
+div.badiv+div.badiv {
+	margin-left: 1vw;
+}
 centeredText {
 	display: block;
 	margin-left: auto;
@@ -58,7 +60,7 @@ centeredText {
 	text-align: center;
 }
 .badiv {
-	border-radius: 5px;
+	border-radius: 0.5vw;
 	background-color: #303136;
 	display: inline-block;
 }
