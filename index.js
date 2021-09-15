@@ -462,3 +462,7 @@ function ductapeClick() {
         document.getElementById("screenshot").src = "ductapeshell.png"
     }
 }
+//Opens a BA'!
+function openBA(ba) {
+  window.open(`https://devhonk.github.io/ba/${ba}.html`)
+}
