@@ -63,4 +63,15 @@ centeredText {
 	border-radius: 0.5vw;
 	background-color: #303136;
 	display: inline-block;
+	animation: movingcards 3s;
+}
+@keyframes movingcards {
+	from {
+		transform: translate(0, 100%);
+		opacity: 0;
+	}
+  	to {
+	  transform: translate(0%, 0%);
+		opacity: 1;
+	}
 }
