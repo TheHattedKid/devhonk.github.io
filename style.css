@@ -52,6 +52,7 @@ a.hidden+a.hidden {
 }
 div.badiv+div.badiv {
 	margin-left: 1vw;
+	margin-top: 1vw;
 }
 centeredText {
 	display: block;
