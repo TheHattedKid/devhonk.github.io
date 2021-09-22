@@ -18,6 +18,6 @@ function addDiscordInviteEmbed(code) {
 		let url = `${DISCORD_ICONS}${obj.guild.id}/${obj.guild.icon}.png`
 
 		let embed = document.getElementById(`discord-${code}`)
-		embed.innerHTML = `<strong>You are invited to join a server</strong><br><strong><a href="https://discord.com/${code}">${name}</a><br>${obj.approximate_presence_count} online  ${obj.approximate_member_count} members`
+		embed.innerHTML = `<strong>You are invited to join a server</strong><br><strong><img src="${url}" style=" margin-left:2%;float:left;border-radius:15% " width="64" height="64"/><a href="https://discord.com/${code}">${name}</a><br>${obj.approximate_presence_count} online  ${obj.approximate_member_count} members`
 	});
 }
