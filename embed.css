@@ -3,3 +3,17 @@
     background-color: #2f3136;
     display: inline-block;
 }
+.online {
+    height: 6px;
+    width: 6px;
+    background-color: rgb(43, 250, 43);
+    border-radius: 50%;
+    display: inline-block;
+} 
+.members {
+    height: 6px;
+    width: 6px;
+    background-color: rgb(116, 127, 141);
+    border-radius: 50%;
+    display: inline-block;
+} 
