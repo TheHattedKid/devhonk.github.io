@@ -1,0 +1,5 @@
+[id^=discord-] {
+    border-radius: 3%;
+    background-color: #2f3136;
+    display: inline-block;
+}
