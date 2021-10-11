@@ -22,8 +22,8 @@ function addDiscordInviteEmbed(code) {
         		let embed = document.getElementById(`discord-${code}`);
         		embed.innerHTML = `
                 <strong>You are invited to join a server</strong><br>
-                <strong><img src="${url}" style=" margin-left:2%;float:left;border-radius:15% " width="64" height="64"/><a href="https://discord.com/invite/${code}">${name}</a><br>
-                <span class="online"></span>${obj.approximate_presence_count} online <span class="members"></span>${obj.approximate_member_count} members`;
+                <strong><img src="${url}" style=" margin-left:2%;float:left;border-radius:15% " width="64" height="64"/><div><a href="https://discord.com/invite/${code}">${name}</a><br>
+                <span class="online"></span>${obj.approximate_presence_count} online <span class="members"></span>${obj.approximate_member_count} members</div>`;
             })
         } catch(e) {
             console.error(e)
