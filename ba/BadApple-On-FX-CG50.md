@@ -33,7 +33,7 @@ Then everyone complained about me wanting to only use C, official hueh moment.
 </centeredText>
 
 <centeredText>
-The first method that I thinked of is of storing a big array of all of the pixels, of all the frames, but decided to scrape the idea because of the limited memory(for information, gint lets you only use 500kB of RAM(source: I dont know I just read the linker script and I may be wrong), so I'll just set this as the max amount of RAM you can use)
+The first method that I thinked of is of storing a big array of all of the pixels, of all the frames, but decided to scrape the idea because of the limited memory(for information, gint lets you only use 500kB of RAM(POST TEXT: the devs are trying to find a way to get more RAM out of it, my bad)(source: I dont know I just read the linker script and I may be wrong), so I'll just set this as the max amount of RAM you can use)
 </centeredText>
 
 <centeredText>
