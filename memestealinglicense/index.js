@@ -8,8 +8,8 @@ curseCasual.load().then((font) => {
   console.log('Font loaded');
 });
 let img = new Image();
-console.log(img.crossOrigin)
-img.src = './template.png';
+img.crossOrigin = "anonymous";
+img.src = 'https://devhonk.github.io/memestealinglicense/template.png';
 
 const blobToImage = (blob) => {
   return new Promise(resolve => {
@@ -64,4 +64,8 @@ async function generateMeme() {
   i.style.width = '60px'
   i.style.height = '60px'
   context.drawImage(i, 16, 146, 60, 60);
+  canvas.toBlob((b) => {
+    document.getElementById("image").src = URL.createObjectURL(b);
+  });
+  
 }
