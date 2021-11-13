@@ -57,6 +57,10 @@ async function generateMeme() {
   context.fillText(`Gender: ${gender}`, 16, 91);
   context.fillText(`Pronouns: ${pronouns}`, 16, 115);
   context.fillText(`Short intro: ${shortIntro}`, 16, 139);
+  context.font = '13px Curse Casual';
+  let moment = new Date().toUTCString();
+  console.log(moment);
+  context.fillText(`License delivered on the: ${moment}`, 111, 200);
   i.style.width = '60px'
   i.style.height = '60px'
   context.drawImage(i, 16, 146, 60, 60);
