@@ -15,10 +15,14 @@
 </head>
 
 <body>
-    <label for="name">Discord ID:</label><input type="text" id="name" name="name" required maxlength="32"><br>
+    <label for="name">Name:</label><input type="text" id="name" name="name" required maxlength="32"><br>
     <label for="gender">Gender(not needed):</label><input type="text" id="gender" name="gender" required maxlength="32"><br>
     <label for="pronouns">Pronouns(not needed):</label><input type="text" id="pronouns" name="pronouns" required maxlength="32"><br>
     <label for="short-intro">Short intro(not needed, please less than 32 chars):</label><input type="text" id="short-intro" name="short-intro" required maxlength="32"><br>
+    <label for="avatar">Profile pic:</label><input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg">
+
     <br>
     <canvas id="memeoutput" width="396" height="224" src="./template.png"></canvas><br>
     <script src="index.js"></script>
