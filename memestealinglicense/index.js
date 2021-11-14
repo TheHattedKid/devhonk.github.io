@@ -8,7 +8,7 @@ curseCasual.load().then((font) => {
   console.log('Font loaded');
 });
 let img = new Image();
-img.crossOrigin = "anonymous";
+img.crossOrigin = 'anonymous';
 img.src = 'https://devhonk.github.io/memestealinglicense/template.png';
 
 const blobToImage = (blob) => {
@@ -21,7 +21,7 @@ const blobToImage = (blob) => {
     }
     img.src = url
   })
-} 
+};
 async function generateMeme() {
   let name = document.getElementById('name').value;
   let gender = document.getElementById('gender').value === '' ?
@@ -65,7 +65,13 @@ async function generateMeme() {
   i.style.height = '60px'
   context.drawImage(i, 16, 146, 60, 60);
   canvas.toBlob((b) => {
-    document.getElementById("image").src = URL.createObjectURL(b);
+    document.getElementById('image').src = URL.createObjectURL(b);
   });
-  
+  document.getElementById('print').disabled = false;
+}
+function printMeme() {
+  popup = window.open();
+  popup.document.write(document.getElementById('image').outerHTML);
+  popup.focus();  // required for IE
+  popup.print();
 }
