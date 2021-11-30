@@ -11,24 +11,49 @@
             font-family: "Curse Casual";
             src: url('https://devhonk.github.io/cursecasual.ttf');
         }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #wrap {
+            padding: 10px;
+            min-height: -webkit-calc(100% - 100px);
+            /* Chrome */
+            min-height: -moz-calc(100% - 100px);
+            /* Firefox */
+            min-height: calc(100% - 100px);
+            /* native */
+        }
+
+        .footer {
+            position: relative;
+            clear: both;
+        }
     </style>
 </head>
 
 <body>
     <label for="name">Name:</label><input type="text" id="name" name="name" required maxlength="32"><br>
-    <label for="gender">Gender(not needed):</label><input type="text" id="gender" name="gender" required maxlength="32"><br>
-    <label for="pronouns">Pronouns(not needed):</label><input type="text" id="pronouns" name="pronouns" required maxlength="32"><br>
-    <label for="short-intro">Short intro(not needed, please less than 32 chars):</label><input type="text" id="short-intro" name="short-intro" required maxlength="32"><br>
-    <label for="avatar">Profile pic:</label><input type="file"
-       id="avatar" name="avatar"
-       accept="image/png, image/jpeg, image/webp, image/gif">
+    <label for="gender">Gender(not needed):</label><input type="text" id="gender" name="gender" required
+        maxlength="32"><br>
+    <label for="pronouns">Pronouns(not needed):</label><input type="text" id="pronouns" name="pronouns" required
+        maxlength="32"><br>
+    <label for="short-intro">Short intro(not needed, please less than 32 chars):</label><input type="text"
+        id="short-intro" name="short-intro" required maxlength="32"><br>
+    <label for="avatar">Profile pic:</label><input type="file" id="avatar" name="avatar"
+        accept="image/png, image/jpeg, image/webp, image/gif">
 
     <br>
-    <canvas style="display: none;" id="memeoutput" width="396" height="224" src="./template.png"></canvas><img id="image"></img><br>
+    <canvas style="display: none;" id="memeoutput" width="396" height="224" src="./template.png"></canvas><img
+        id="image"></img><br>
     <script src="index.js"></script>
-    <button onclick="generateMeme()">Make myself a good meme stealing license</button><button id="print" disabled onclick="printMeme()">Print!</button>
+    <button onclick="generateMeme()">Make myself a good meme stealing license</button><button id="print" disabled
+        onclick="printMeme()">Print!</button>
 </body>
-<footer>
+<footer class="footer">
     <hr>
     <center>This website was made as a joke, please don't kill me for the shittiness of it.</center>
 </footer>
