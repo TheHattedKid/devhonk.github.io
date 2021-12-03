@@ -9,7 +9,7 @@
 // would be poggers so that at Christmas, we get a sort of animation(even if
 // it's simple)!
 
-String.prototype.replaceAt = (index, replacement) => {
+String.prototype.replaceAt = function(index, replacement) {
   return this.substr(0, index) + replacement +
       this.substr(index + replacement.length);
 };
