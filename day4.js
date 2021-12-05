@@ -1,8 +1,9 @@
-const { cp } = require("fs");
-const { exit } = require("process");
+const {cp} = require('fs');
+const {exit} = require('process');
 
-const arrayWithoutElementAtIndex = (arr, index) => arr.filter((value, arrIndex) => index !== arrIndex);
-let input = require("fs").readFileSync("./in.txt").toString().split('\n');
+const arrayWithoutElementAtIndex = (arr, index) =>
+    arr.filter((value, arrIndex) => index !== arrIndex);
+let input = require('fs').readFileSync('./in.txt').toString().split('\n');
 let nums = eval('[' + input[0] + ']');  // cringe.
 let input1 = input.splice(2);
 let boards = [];
@@ -41,9 +42,9 @@ function unMarkWithNumber(n) {
     for (let j = 0; j < board.length; j++) {
       let arr = board[j];
       for (let k = 0; k < arr.length; k++) {
-        let n1 = parseInt(arr[k].replace("*", ""), 10);
+        let n1 = parseInt(arr[k].replace('*', ''), 10);
         if (n1 === n) {
-          boards[i][j][k] = `${boards[i][j][k].replace("*", "")}`;
+          boards[i][j][k] = `${boards[i][j][k].replace('*', '')}`;
         }
       }
     }
@@ -51,7 +52,7 @@ function unMarkWithNumber(n) {
 }
 function detectWinners() {
   // Detect horizontally
-  let out = []
+  let out = [];
   for (let i = 0; i < boards.length; i++) {
     let board = boards[i];
     for (let j = 0; j < board.length; j++) {
@@ -78,7 +79,7 @@ function detectWinners() {
 }
 let winners = [];
 function calculate(winner, number) {
-  //let winningBoard = boards[winner];
+  // let winningBoard = boards[winner];
   let out = 0;
   for (let line of winner) {
     for (let str of line) {
@@ -87,37 +88,46 @@ function calculate(winner, number) {
       }
     }
   }
-  console.log(out, "*", number);
+  console.log(out, '*', number);
   return out * number;
 }
 let a = false;
 let b1 = boards;
 let lwinner = undefined;
 let llwinner = null;
-//console.log(boards)
+// console.log(boards)
 let preWinner;
 let num = 0;
+let snum = num;
 let ab = false;
-for(let i = 0; i < nums.length; i++) {
+
+for (let i = 0; i < nums.length; i++) {
   num = nums[i];
-  console.log("Drawing", num, "!");
+  console.log('Drawing', num, '!');
   markWithNumber(num);
   let winnerList = detectWinners();
-  if(winnerList.length !== 0) {
-    for(let winner of winnerList) {
+  if (winnerList.length !== 0) {
+    for (let winner of winnerList) {
       winners.push(boards[winner])
       boards = arrayWithoutElementAtIndex(boards, winner);
-      console.log(boards);
-      if(boards.length === 1) {
-        console.log("a")
-        let last = boards[0]
-        console.log(last);
-        console.log(calculate(last, num));
-        exit(0)
+      // console.log(boards);
+      if (boards.length === 1) {
+        snum = num;
+        console.log('a')
+        let last = boards[0];
+        if (detectWinners().length !== 0) {
+          console.log(last);
+          console.log(calculate(last, num));
+          exit(0);
+        }
+      }
+      if (boards.length === 0) {
+        snum = num;
+        break;
       }
     }
   }
 }
 let last = winners.pop();
 console.log(last);
-console.log(calculate(last, num));
+console.log(calculate(last, snum));
