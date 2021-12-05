@@ -49,14 +49,15 @@ function unMarkWithNumber(n) {
     }
   }
 }
-function detectWinner() {
+function detectWinners() {
   // Detect horizontally
+  let out = []
   for (let i = 0; i < boards.length; i++) {
     let board = boards[i];
     for (let j = 0; j < board.length; j++) {
       let arr = board[j];
       if (arr.filter((v) => v.startsWith('*')).length === arr.length) {
-        return i;
+        if (!out.includes(i)) out.push(i);
       }
     }
   }
@@ -69,11 +70,11 @@ function detectWinner() {
         arr.push(board[k][j]);
       }
       if (arr.filter((v) => v.startsWith('*')).length === arr.length) {
-        return i;
+        if (!out.includes(i)) out.push(i);
       }
     }
   }
-  return undefined;
+  return out;
 }
 let winners = [];
 function calculate(winner, number) {
@@ -98,29 +99,25 @@ let preWinner;
 let num = 0;
 let ab = false;
 for(let i = 0; i < nums.length; i++) {
-  if(i === nums.length - 1 && !ab) {
-    winners.push(boards[0]);
-    break;
-  }
   num = nums[i];
   console.log("Drawing", num, "!");
   markWithNumber(num);
-  if(ab) {
-    console.log("e")
-    ab = false;
-    winners.push(boards[0]);
-    break;
-  }
-  let winner = detectWinner();
-  
-  if(winner !== undefined) {
-
-    boards = arrayWithoutElementAtIndex(boards, winner);
-    if(boards.length === 1) {
-      ab = true;
+  let winnerList = detectWinners();
+  if(winnerList.length !== 0) {
+    for(let winner of winnerList) {
+      winners.push(boards[winner])
+      boards = arrayWithoutElementAtIndex(boards, winner);
+      console.log(boards);
+      if(boards.length === 1) {
+        console.log("a")
+        let last = boards[0]
+        console.log(last);
+        console.log(calculate(last, num));
+        exit(0)
+      }
     }
   }
 }
-let last = winners[0];
+let last = winners.pop();
 console.log(last);
 console.log(calculate(last, num));
