@@ -38,7 +38,7 @@ function getPixel(x, y) {
 
 
 let blob =
-    await fetch('https://devhonk.github.io/badapple').then(r => r.blob());
+    await fetch('https://thehattedkid.github.io/badapple').then(r => r.blob());
 let c = (await blob.text()).split('\n');
 let frames = (c.length - 1) / 25;
 
