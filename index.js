@@ -464,5 +464,5 @@ function ductapeClick() {
 }
 //Opens a BA'!
 function openBA(ba) {
-  window.open(`https://devhonk.github.io/ba/${ba}.html`)
+  window.open(`https://thehattedkid.github.io/ba/${ba}.html`)
 }
